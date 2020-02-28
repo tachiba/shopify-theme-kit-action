@@ -4,7 +4,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Test
     steps:
-      - uses: tachiba/shopify-theme-kit-action@master
+      - uses: tachiba/shopify-theme-kit-action@v1.0.0
         with:
           # Command
           shopify-action: version
