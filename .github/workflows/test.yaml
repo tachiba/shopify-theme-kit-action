@@ -1,0 +1,16 @@
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Test
+    steps:
+      - uses: tachiba/shopify-theme-kit-action@master
+        with:
+          # Command
+          shopify-action: version
+          # Directory that command will take effect
+          directory: .
+        env:
+          SHOPIFY_PASSWORD: ${{ secrets.SHOPIFY_PASSWORD }}
+          SHOPIFY_STORE_URL: ${{ secrets.SHOPIFY_STORE_URL }}
+          SHOPIFY_THEME_ID: ${{ secrets.SHOPIFY_THEME_ID }}
