@@ -1,16 +1,15 @@
 name: Shopify Theme Kit
 description: Plain binary of Shopify Theme Kit for Github Actions
 inputs:
-  shopify-action:
+  shopify-command:
     description: Command
     required: true
-    default: help
-  directory:
-    description: Directory that command will take effect
-    default: .
+  shopify-flags:
+    description: Flags
+    default: ""
 runs:
   using: docker
   image: Dockerfile
   args:
-    - ${{ inputs.shopify-action }}
-    - ${{ inputs.directory }}
+    - ${{ inputs.shopify-command }}
+    - ${{ inputs.shopify-flags }}
