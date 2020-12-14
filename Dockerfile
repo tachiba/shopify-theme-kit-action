@@ -3,7 +3,7 @@ FROM alpine
 RUN apk update
 
 # https://shopify.github.io/themekit/
-RUN apk add --no-cache python ca-certificates curl && \
+RUN apk add --no-cache python2 ca-certificates curl && \
     curl -s https://shopify.github.io/themekit/scripts/install.py | python && \
     apk del curl
 
