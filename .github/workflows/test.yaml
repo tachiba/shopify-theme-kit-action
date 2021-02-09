@@ -1,4 +1,8 @@
-on: push
+on:
+  push:
+  schedule:
+    # https://crontab.guru/#00_21_*_*_0
+    - cron: "00 21 * * 0"
 jobs:
   test:
     runs-on: ubuntu-latest
