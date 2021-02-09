@@ -1,5 +1,7 @@
 on:
   push:
+    branches:
+      - master
   schedule:
     # https://crontab.guru/#00_21_*_*_0
     - cron: "00 21 * * 0"
@@ -8,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Test
     steps:
-      - uses: tachiba/shopify-theme-kit-action@master
+      - uses: tachiba/shopify-theme-kit-action@mater
         with:
           # Command
           shopify-command: version
